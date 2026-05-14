@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Роман & Вера | 04.07.2026</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+    :root {
+      --main: #462639;
+      --accent: #efd4c4;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8f4f0;
+      color: #333;
+      text-align: center;
+      line-height: 1.7;
+    }
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(70,38,57,0.55), rgba(70,38,57,0.55)), 
+                  url('https://i.imgur.com/YOUR_PHOTO_LINK.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
+    .hero-content {
+      z-index: 2;
+      padding: 20px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.8rem;
+      margin: 0 0 10px 0;
+      color: var(--accent);
+    }
+    .and {
+      font-size: 2rem;
+      margin: 10px 0;
+      opacity: 0.9;
+    }
+    .date {
+      font-size: 2.1rem;
+      letter-spacing: 6px;
+      margin: 25px 0;
+      color: var(--accent);
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    .time-block {
+      background: rgba(255,255,255,0.15);
+      padding: 15px 20px;
+      border-radius: 12px;
+      min-width: 80px;
+    }
+    .time-number {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    .time-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .section {
+      padding: 90px 20px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--main);
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 25px 12px;
+      padding: 16px 42px;
+      background: var(--main);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #5c334d;
+      transform: translateY(-4px);
+    }
+    .rsvp-form {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 40px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Роман & Вера</h1>
+      <p class="and">Приглашают вас на свадьбу</p>
+      <div class="date">04 • 07 • 2026</div>
+      <div class="countdown" id="countdown">
+        <div class="time-block"><div class="time-number" id="days">00</div><div class="time-label">Дней</div></div>
+        <div class="time-block"><div class="time-number" id="hours">00</div><div class="time-label">Часов</div></div>
+        <div class="time-block"><div class="time-number" id="minutes">00</div><div class="time-label">Минут</div></div>
+        <div class="time-block"><div class="time-number" id="seconds">00</div><div class="time-label">Секунд</div></div>
+      </div>
+      <a href="#details" class="btn">Подробнее о дне</a>
+    </div>
+  </div>
+  <div class="section" id="details">
+    <h2>Дорогие родные и друзья!</h2>
+    <p>С огромной радостью мы приглашаем вас разделить с нами самый важный и счастливый день в нашей жизни.</p>
+    <h3>Когда</h3>
+    <p><strong>4 июля 2026 года в 14:00</strong></p>
+    <h3>Где</h3>
+    <p>ул. Чайковского, д. 119<br>Ковров</p>
+    <h3>Дресс-код</h3>
+    <p><strong>Старославянский стиль</strong><br>Будем рады видеть вас в образах, вдохновлённых славянскими традициями.</p>
+  </div>
+  <div class="section" style="background: #462639; color: #efd4c4;">
+    <h2 style="color:#efd4c4;">Как мы познакомились</h2>
+    <p>Наша история началась вполне современно — мы познакомились через мобильное приложение для знакомств. Кто бы мог подумать, что обычный свайп приведёт нас к этому прекрасному дню и желанию провести всю жизнь вместе.</p>
+  </div>
+  <div class="section">
+    <h2>Подтверждение участия </h2>
+    <div class="rsvp-form">
+      <p>Просим подтвердить присутствие до 15 июня 2026.</p>
+      <form action="https://formsubmit.co/Roman.tennis.r@yandex.ru" method="POST">
+        <input type="text" name="Имя" placeholder="Ваше имя" required style="width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+        <select name="Присутствие" style="width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+          <option value="">Буду ли я?</option>
+          <option value="Приду с радостью">Приду с радостью</option>
+          <option value="Не смогу быть">К сожалению, не смогу</option>
+        </select>
+        <h4>Горячее блюдо</h4>
+        <select name="Горячее" style="width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+          <option value="">Выберите блюдо</option>
+          <option value="Свинина">Свинина</option>
+          <option value="Курица">Курица</option>
+          <option value="Рыбное">Рыбное</option>
+          <option value="Вегетарианское">Вегетарианское</option>
+        </select>
+        <h4>Алкоголь</h4>
+        <select name="Алкоголь" style="width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+          <option value="">Предпочтения</option>
+          <option value="Вино">Вино</option>
+          <option value="Водка">Водка</option>
+          <option value="Коньяк">Коньяк</option>
+          <option value="Виски">Виски</option>
+          <option value="Мартини">Мартини</option>
+          <option value="Безалкогольные">Только безалкогольные</option>
+        </select>
+        <button type="submit" class="btn" style="width:100%; margin-top:20px;">Отправить ответ</button>
+      </form>
+    </div>
+  </div>
+  <div class="section" style="background: var(--main); color: var(--accent);">
+    <p style="font-size:1.1rem;">С любовью,<br><strong>Роман и Вера</strong></p>
+  </div>
+  <script>
+    function countdown() {
+      const weddingDate = new Date("2026-07-04T14:00:00").getTime();
+      const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+        if (distance < 0) {
+          clearInterval(timer);
+          document.getElementById("countdown").innerHTML = "<h2 style='color:white;'>Мы уже женаты! </h2>";
+          return;
+        }
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("days").textContent = String(days).padStart(2, '0');
+        document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+      }, 1000);
+    }
+    window.onload = countdown;
+  </script>
+</body>
+</html>
