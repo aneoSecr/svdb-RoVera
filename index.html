@@ -6,15 +6,17 @@
   <title>Роман & Вера | 04.07.2026</title>
   
   <!-- Фавикон -->
-  <link rel="icon" href="favicon1.png" type="image/png">
-  <link rel="apple-touch-icon" href="favicon1.png">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+    
     :root {
       --main: #808000;
       --accent: #efd4c4;
     }
+    
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -23,6 +25,7 @@
       text-align: center;
       line-height: 1.7;
     }
+    
     .hero {
       height: 100vh;
       background: linear-gradient(rgba(70,38,57,0.55), rgba(70,38,57,0.55)),
@@ -33,21 +36,38 @@
       color: white;
       position: relative;
     }
+    
     .hero-content {
       z-index: 2;
       padding: 20px;
+      margin-top: 40px;
     }
+    
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4.8rem;
+      font-size: 4.4rem;
       margin: 0 0 10px 0;
       color: var(--accent);
+      line-height: 1.05;
     }
+    
     .and {
       font-size: 2rem;
-      margin: 10px 0;
-      opacity: 0.9;
+      margin: 10px 0 25px 0;
+      opacity: 0.95;
     }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 3.6rem; }
+      .and { font-size: 1.75rem; }
+      .hero-content { margin-top: 60px; padding: 15px 20px; }
+    }
+    
+    @media (max-width: 480px) {
+      h1 { font-size: 3.1rem; }
+      .and { font-size: 1.6rem; }
+    }
+
     .date {
       font-size: 2.1rem;
       letter-spacing: 6px;
@@ -142,13 +162,16 @@
     <h2>Дорогие родные и друзья!</h2>
     <p>С огромной радостью мы приглашаем вас разделить с нами самый важный и счастливый день в нашей жизни.</p>
     <h3>Когда</h3>
-    <p><strong>4 июля 2026 года в 14:00</strong></p>
+    <p><strong>4 июля 2026 года в 15:00</strong></p>
     <h3>Где</h3>
     <p>ул. Чайковского, д. 119<br>Ковров</p>
     <h3>Дресс-код</h3>
     <p><strong>Старославянский стиль</strong><br>Будем рады видеть вас в образах, вдохновлённых славянскими традициями.</p>
-    <p><strong>Что дарить?</strong><br>Главный подарок для нас — ваше присутствие и искренние поздравления.<br>
-Если хочется добавить что-то ещё, мы будем рады хорошему вину. Цветы невесте просим не дарить, жених будет рад пиву.</p>
+    <p><strong>Что дарить?</strong><br>
+      Главный подарок для нас — ваше присутствие и искренние поздравления❤️<br>
+      Если хочется добавить что-то ещё, мы будем рады хорошему вину. Цветы невесте просим не дарить, жених будет рад пиву.
+
+</p>
   </div>
 
   <div class="section" style="background: #462639; color: #efd4c4;">
@@ -158,10 +181,9 @@
     <a href="#video" class="btn video-btn">Смотреть наше видео ❤️</a>
   </div>
 
-  <!-- Блок с видео -->
   <div class="section" id="video" style="background: #f8f4f0;">
-    <h2>Наше видео</h2>
-    <p style="margin-bottom: 30px;">Небольшой фрагмент с предложением руки и сердца</p>
+    <h2>Небольшой фрагмент с предложением руки и сердца</h2>
+    <p style="margin-bottom: 30px;"></p>
     
     <div style="max-width: 800px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
       <iframe 
@@ -190,19 +212,23 @@
 
   <script>
     function countdown() {
-      const weddingDate = new Date("2026-07-04T14:00:00").getTime();
+      const weddingDate = new Date("2026-07-04T15:00:00").getTime();  // ← Изменено на 15:00
+      
       const timer = setInterval(() => {
         const now = new Date().getTime();
         const distance = weddingDate - now;
+        
         if (distance < 0) {
           clearInterval(timer);
-          document.getElementById("countdown").innerHTML = "<h2 style='color:white;'>Мы уже женаты! </h2>";
+          document.getElementById("countdown").innerHTML = "<h2 style='color:white;'>Мы уже женаты! 🎉</h2>";
           return;
         }
+
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
         document.getElementById("days").textContent = String(days).padStart(2, '0');
         document.getElementById("hours").textContent = String(hours).padStart(2, '0');
         document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
