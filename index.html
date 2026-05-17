@@ -13,7 +13,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
     
     :root {
-      --main: #808000;     /* Оливковый цвет для текста и заголовков */
+      --main: #808000;
       --accent: #efd4c4;
     }
     
@@ -39,7 +39,7 @@
 
     .particle {
       position: absolute;
-      color: rgba(200, 80, 60, 0.7);
+      color: rgba(200, 80, 60, 0.75);
       font-size: 20px;
       animation: floatHeart linear infinite;
       text-shadow: 0 0 8px rgba(239, 212, 196, 0.5);
@@ -47,9 +47,9 @@
     }
 
     @keyframes floatHeart {
-      0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      15%  { opacity: 0.75; }
-      85%  { opacity: 0.75; }
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.75; }
+      85% { opacity: 0.75; }
       100% { transform: translateY(-120px) rotate(380deg); opacity: 0; }
     }
 
@@ -67,7 +67,7 @@
     }
 
     .hero-content {
-      z-index: 4;
+      z-index: 5;
       padding: 20px;
       margin-top: 40px;
       position: relative;
@@ -97,7 +97,7 @@
 
     h2 {
       font-family: 'Playfair Display', serif;
-      color: var(--main);           /* Оливковый цвет */
+      color: var(--main);
       font-size: 2.8rem;
       margin-bottom: 30px;
     }
@@ -124,14 +124,19 @@
     }
     .btn:hover { background: #5c5c00; transform: translateY(-4px); }
     .video-btn { background: #808000; font-size: 1.15rem; padding: 18px 50px; margin: 30px 0; }
+
+    .rsvp-section {
+      padding: 60px 20px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Плавающие сердечки по всему сайту -->
+  <!-- Глобальные плавающие сердечки -->
   <div class="global-particles" id="global-particles"></div>
 
   <div class="hero">
+    <!-- Частицы на главной фотографии -->
     <div class="particles" id="particles"></div>
     
     <div class="hero-content">
@@ -158,42 +163,28 @@
     <h3>Дресс-код</h3>
     <p><strong>Старославянский стиль</strong><br>Будем рады видеть вас в образах, вдохновлённых славянскими традициями.</p>
     <p><strong>Что дарить?</strong><br>
-      Главный подарок для нас — ваше присутствие и искренние поздравления❤️<br>
-      Если хочется добавить что-то ещё, мы будем рады хорошему вину. Цветы невесте просим не дарить, невеста будет рада шоколадке Milka, а жених будет рад пиву.
-
-</p>
+      Будем рады — вашему присутствию и искренним поздравлениям❤️<br>
+      Если хочется добавить что-то ещё, мы будем рады хорошему вину. Цветы невесте просим не дарить, невеста будет рада шоколадке Milka, а жених будет рад пиву.</p>
   </div>
 
   <div class="section" style="background: #462639; color: #efd4c4;">
     <h2 style="color:#808000;">Как мы познакомились</h2>
     <p>Наша история началась вполне современно — мы познакомились через мобильное приложение для знакомств. Кто бы мог подумать, что обычный свайп приведёт нас к этому прекрасному дню и желанию провести всю жизнь вместе.</p>
-    
-    <a href="#video" class="btn video-btn">Смотреть наше видео ❤️</a>
+    <a href="#video" class="btn video-btn">Тык сюда ❤️</a>
   </div>
 
   <div class="section" id="video" style="background: #f8f4f0;">
     <h2>Небольшой фрагмент с предложением руки и сердца</h2>
-    <p style="margin-bottom: 30px;"></p>
-    
     <div style="max-width: 800px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-      <iframe 
-        width="100%" 
-        height="450" 
-        src="https://vk.com/video_ext.php?oid=-238706366&id=456239018&hd=2" 
-        frameborder="0" 
-        allow="encrypted-media; fullscreen; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
+      <iframe width="100%" height="450" src="https://vk.com/video_ext.php?oid=-238706366&id=456239018&hd=2" frameborder="0" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
-  <div class="section">
-    <div class="rsvp-form">
-      <h2>Подтверждение участия</h2>
-      <p>Просим подтвердить присутствие до 15 июня 2026.</p>
-      <script src="https://forms.yandex.ru/_static/embed.js"></script>
-      <iframe src="https://forms.yandex.ru/u/6a06b071e010db1f21e8afc6?iframe=1" frameborder="0" name="ya-form-6a06b071e010db1f21e8afc6" width="100%"></iframe>
-    </div>
+  <div class="section rsvp-section">
+    <h2>Подтверждение участия</h2>
+    <p>Просим подтвердить присутствие до 15 июня 2026.</p>
+    <script src="https://forms.yandex.ru/_static/embed.js"></script>
+    <iframe src="https://forms.yandex.ru/u/6a06b071e010db1f21e8afc6?iframe=1" frameborder="0" name="ya-form-6a06b071e010db1f21e8afc6" width="100%"></iframe>
   </div>
 
   <div class="section" style="background: var(--main); color: var(--accent);">
@@ -201,73 +192,39 @@
   </div>
 
   <script>
-    function countdown() {
-      const weddingDate = new Date("2026-07-04T15:00:00").getTime();  // ← Изменено на 15:00
-      
-      const timer = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = weddingDate - now;
-        
-        if (distance < 0) {
-          clearInterval(timer);
-          document.getElementById("countdown").innerHTML = "<h2 style='color:white;'>Мы уже женаты! 🎉</h2>";
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("days").textContent = String(days).padStart(2, '0');
-        document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-        document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-        document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
-      }, 1000);
-    }
-    window.onload = countdown;
-  </script>
-</body>
-</html>
-<script>
-    // Глобальные частицы по всему сайту
+    // Глобальные частицы
     function createGlobalParticles() {
       const container = document.getElementById('global-particles');
       const symbols = ['❤️', '💍', '👰', '🤵', '♡', '•'];
-      
-      for (let i = 0; i < 38; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-        
-        particle.style.left = Math.random() * 100 + 'vw';
-        particle.style.animationDuration = (Math.random() * 18 + 24) + 's'; // разная скорость
-        particle.style.animationDelay = '-' + Math.random() * 45 + 's';     // разная задержка
-        particle.style.opacity = Math.random() * 0.55 + 0.35;
-        particle.style.fontSize = (Math.random() * 13 + 17) + 'px';
-        
-        container.appendChild(particle);
+      for (let i = 0; i < 35; i++) {
+        const p = document.createElement('div');
+        p.classList.add('particle');
+        p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        p.style.left = Math.random() * 100 + 'vw';
+        p.style.animationDuration = (Math.random() * 20 + 25) + 's';
+        p.style.animationDelay = '-' + Math.random() * 40 + 's';
+        p.style.opacity = Math.random() * 0.5 + 0.4;
+        container.appendChild(p);
       }
     }
 
-    // Частицы только в hero (можно оставить или убрать)
+    // Частицы на главной фотографии
     function createHeroParticles() {
       const container = document.getElementById('particles');
       const symbols = ['❤️', '💍', '👰', '🤵', '♡', '•'];
-      for (let i = 0; i < 25; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-        particle.style.left = Math.random() * 100 + 'vw';
-        particle.style.animationDuration = (Math.random() * 20 + 20) + 's';
-        particle.style.animationDelay = '-' + Math.random() * 40 + 's';
-        particle.style.opacity = Math.random() * 0.6 + 0.4;
-        particle.style.fontSize = (Math.random() * 14 + 14) + 'px';
-        container.appendChild(particle);
+      for (let i = 0; i < 40; i++) {
+        const p = document.createElement('div');
+        p.classList.add('particle');
+        p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        p.style.left = Math.random() * 100 + 'vw';
+        p.style.animationDuration = (Math.random() * 18 + 22) + 's';
+        p.style.animationDelay = '-' + Math.random() * 35 + 's';
+        p.style.opacity = Math.random() * 0.7 + 0.5;
+        p.style.fontSize = (Math.random() * 12 + 18) + 'px';
+        container.appendChild(p);
       }
     }
 
-    // Таймер
     function countdown() {
       const weddingDate = new Date("2026-07-04T15:00:00").getTime();
       setInterval(() => {
